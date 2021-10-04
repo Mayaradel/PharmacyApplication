@@ -5,6 +5,7 @@ class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
+
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,14 @@ class _HomeState extends State<Home> {
         ],
       ),
 
-      body: null,
+      body: Container(
+          constraints: BoxConstraints.expand(),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("image2.jpeg"),
+                  fit: BoxFit.cover)
+          ),
+      ),
     );
   }
 }

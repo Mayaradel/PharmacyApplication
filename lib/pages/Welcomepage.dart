@@ -11,8 +11,9 @@ class _WelcomepageState extends State<Welcomepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Application name'),
+        title: Text('Pharmacy'),
       ),
+
       body:
       Center(
       child: Column(
