@@ -12,7 +12,7 @@ class NewCourse extends StatefulWidget {
 class _NewCourseState  extends State<NewCourse> {
   var name;
   var content;
-  var hours;
+  // var hours;
   late DbHelper helper ;
 
   @override
@@ -55,7 +55,7 @@ class _NewCourseState  extends State<NewCourse> {
             ),
             SizedBox(height: 20,),
 
-            TextFormField(
+            /*TextFormField(
               keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   hintText: 'Enter Course hours'
@@ -66,11 +66,11 @@ class _NewCourseState  extends State<NewCourse> {
                 });
               },
             ),
-            SizedBox(height: 15,),
+            SizedBox(height: 15,),*/
 
             RaisedButton( child: Text('Save'),
                 onPressed : () async{
-                  Course c = Course({'name':name , 'content' :content ,'hours': hours});
+                  Course c = Course({'name':name ,'content':content});
                   int id = await helper.createCourse(c);
                   Navigator.of(context).pop();
                 },
@@ -78,7 +78,6 @@ class _NewCourseState  extends State<NewCourse> {
           ],
         ),
       )
-
     );
   }
 }

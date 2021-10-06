@@ -18,7 +18,7 @@ class DbHelper{
     String path = join(await getDatabasesPath(), 'school.db');
     _db = await openDatabase(path,version: 1,onCreate: (Database db, int v){
       //create all tables
-      db.execute("create table courses(id integer primary key autoincrement, name varchar(50), content varchar(255), hours integer)");
+      db.execute("create table courses(id integer primary key autoincrement, name varchar(50), content varchar(255))");
     });
     return _db;
   }

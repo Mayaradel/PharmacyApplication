@@ -16,51 +16,51 @@ class _WelcomepageState extends State<Welcomepage> {
 
       body:
       Center(
-      child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-      SizedBox(
-      width: 200,
-      height: 50,
-      child: RaisedButton(
-        padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
 
-        onPressed:()=> Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home())),
+                onPressed:()=> Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home())),
 
-        color: Colors.blue,
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30))),
-        child: Text(
-          "First Data",
-          style: TextStyle(color: Colors.white),
-        ),
-      ),
-      ),
-        SizedBox(height: 30,),
-
-        SizedBox(
-          width: 200,
-          height: 50,
-          child: RaisedButton(
-            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
-
-            onPressed:()=> Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home())),
-
-            color: Colors.blue,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(30))),
-            child: Text(
-              "Second Data",
-              style: TextStyle(color: Colors.white),
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                child: Text(
+                  "First Data",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
             ),
-          ),
+            SizedBox(height: 30,),
+
+            SizedBox(
+              width: 200,
+              height: 50,
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
+
+                onPressed:()=> Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home())),
+
+                color: Colors.blue,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30))),
+                child: Text(
+                  "Second Data",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ),
+            SizedBox(height: 16,),
+
+          ],
         ),
-        SizedBox(height: 16,),
 
-        ],
       ),
-
-    ),
     );
   }
 }
