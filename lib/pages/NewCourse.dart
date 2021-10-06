@@ -1,8 +1,7 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:database/Model/Course.dart';
 import 'package:database/dbhelper.dart';
 import 'package:flutter/material.dart';
+import 'Home.dart';
 
 class NewCourse extends StatefulWidget {
   @override
@@ -68,11 +67,11 @@ class _NewCourseState  extends State<NewCourse> {
             ),
             SizedBox(height: 15,),*/
 
-            RaisedButton( child: Text('Save'),
+            RaisedButton(child: Text('Save'),
                 onPressed : () async{
                   Course c = Course({'name':name ,'content':content});
                   int id = await helper.createCourse(c);
-                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home()));
                 },
             )
           ],

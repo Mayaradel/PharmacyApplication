@@ -11,7 +11,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Welcomepage(),
+      home: Welcomepage(),
+      /*home: Scaffold (
+        body: Column (children: [
+          Container(
+            constraints: BoxConstraints.expand(),
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/pharmacyPage.jpeg"),
+                    fit: BoxFit.cover)
+            ),
+          ),
+          Welcomepage(),
+        ]
+*/
+
     );
   }
+
 }
+

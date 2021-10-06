@@ -53,14 +53,6 @@ class _HomeState extends State<Home> {
         },
        
       )
-      /* Container(
-        constraints: BoxConstraints.expand(),
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/images/pharmacyPage.jpeg"),
-                fit: BoxFit.cover)
-        ),
-      ),*/
     );
   }
 }
