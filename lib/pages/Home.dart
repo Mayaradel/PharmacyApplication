@@ -1,5 +1,6 @@
 import 'package:database/Model/Course.dart';
 import 'package:database/pages/NewCourse.dart';
+import 'package:database/pages/coursedetails.dart';
 import 'package:flutter/material.dart';
 
 import '../dbhelper.dart';
@@ -31,7 +32,9 @@ class _HomeState extends State<Home> {
         ],
       ),
 
-      body: FutureBuilder(future: helper.allCourses(),
+      body:
+
+            FutureBuilder(future: helper.allCourses(),
         builder: (context, AsyncSnapshot snapshot) {
 
         if (!snapshot.hasData){
@@ -44,15 +47,31 @@ class _HomeState extends State<Home> {
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, i) {
                     Course course = Course.fromMap(snapshot.data[i]);
-                    return ListTile(title: Text('${course.name}'),
-                        subtitle: Text(course.content)
+                    return ListTile(
+                      title: Text('${course.name}'),
+                        subtitle: Text(course.content),
+                      trailing: IconButton( icon: Icon(Icons.delete , color: Colors.red,)
+                          ,onPressed:() {
+                            setState(() {
+                              helper.deleteCourse(course.id);
+                            });
+                          },),
+                      onTap:() {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => CourseDetails(course),));
+
+                      },
+
+
                       );
                   }
               );
             }
         },
-       
+
       )
+
+     //     ],
+       // )
     );
   }
 }

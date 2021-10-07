@@ -8,7 +8,7 @@ class NewCourse extends StatefulWidget {
   _NewCourseState createState() => _NewCourseState();
 }
 
-class _NewCourseState  extends State<NewCourse> {
+class _NewCourseState extends State<NewCourse> {
   var name;
   var content;
   // var hours;
@@ -53,19 +53,6 @@ class _NewCourseState  extends State<NewCourse> {
               },
             ),
             SizedBox(height: 20,),
-
-            /*TextFormField(
-              keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                  hintText: 'Enter Course hours'
-              ),
-              onChanged: (value){
-                setState(() {
-                  hours = int.parse(value);
-                });
-              },
-            ),
-            SizedBox(height: 15,),*/
 
             RaisedButton(child: Text('Save'),
                 onPressed : () async{

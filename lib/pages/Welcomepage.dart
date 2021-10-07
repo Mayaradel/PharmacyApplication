@@ -15,13 +15,26 @@ class _WelcomepageState extends State<Welcomepage> {
       ),
 
       body:
-      Center(
+      Container(
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/pharmacyPage.jpeg"),
+                fit: BoxFit.cover)
+        ),
+
+        child:
+        Column(
+        children: <Widget>[
+          Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            SizedBox(height: 500,),
             SizedBox(
               width: 200,
               height: 50,
+
               child: RaisedButton(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
 
@@ -43,9 +56,7 @@ class _WelcomepageState extends State<Welcomepage> {
               height: 50,
               child: RaisedButton(
                 padding: EdgeInsets.symmetric(vertical: 8, horizontal: 30),
-
                 onPressed:()=> Navigator.of(context).push(MaterialPageRoute(builder:(context)=>Home())),
-
                 color: Colors.blue,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(30))),
@@ -55,12 +66,14 @@ class _WelcomepageState extends State<Welcomepage> {
                 ),
               ),
             ),
-            SizedBox(height: 16,),
 
           ],
         ),
-
       ),
+      ],
+    ),
+        ),
+
     );
   }
 }
