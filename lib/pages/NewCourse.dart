@@ -44,7 +44,7 @@ class _NewCourseState extends State<NewCourse> {
             SizedBox(height: 20,),
 
             TextFormField(
-              maxLines: 10,
+              maxLines: 30,
               decoration: InputDecoration(
                 hintText: 'Content'
               ),
@@ -52,7 +52,8 @@ class _NewCourseState extends State<NewCourse> {
                 content=value;
               },
             ),
-            SizedBox(height: 20,),
+
+            SizedBox(height: 30,),
 
             RaisedButton(child: Text('Save'),
                 onPressed : () async{

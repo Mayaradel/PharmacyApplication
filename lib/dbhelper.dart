@@ -40,5 +40,11 @@ class DbHelper{
     Database? db = await createDatabase();
     return db!.delete('courses',where: 'id = ?',whereArgs:[id] );
   }
+ /* Future<List> sortlist(Course course) async{
+    Database? db = await createDatabase();
+    //return db.toString().sort();
+    List<String> mylist =
+
+  }*/
   }
 

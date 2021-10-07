@@ -33,7 +33,6 @@ class _HomeState extends State<Home> {
       ),
 
       body:
-
             FutureBuilder(future: helper.allCourses(),
         builder: (context, AsyncSnapshot snapshot) {
 
@@ -47,6 +46,7 @@ class _HomeState extends State<Home> {
                   itemCount: snapshot.data!.length,
                   itemBuilder: (context, i) {
                     Course course = Course.fromMap(snapshot.data[i]);
+
                     return ListTile(
                       title: Text('${course.name}'),
                         subtitle: Text(course.content),
@@ -58,9 +58,7 @@ class _HomeState extends State<Home> {
                           },),
                       onTap:() {
                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => CourseDetails(course),));
-
                       },
-
 
                       );
                   }
